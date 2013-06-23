@@ -1,0 +1,43 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    cron (1.2.4)
+
+GIT
+  remote: https://github.com/apsoto/monit.git
+  ref: master
+  sha: a571b7a20ec5beaabace352c639dc5bc8e5a3915
+  specs:
+    monit (0.7.1)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks.git
+  path: cookbooks/system
+  ref: master
+  sha: 720d70b1b0a2cc36e487d13f69dc19d7fe6eada4
+  specs:
+    system (0.0.1)
+      cron (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/infrastructure.git
+  path: cookbooks/minidlna
+  ref: master
+  sha: faa32e1b59bb21ab44139371415d5d3a5c1af35c
+  specs:
+    minidlna (0.0.1)
+      monit (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/apt.git
+  ref: 1.10.0
+  sha: d4b5912cd8f3e73a417b3b176fb85e37b04993fa
+  specs:
+    apt (1.10.0)
+
+DEPENDENCIES
+  apt (>= 0)
+  minidlna (>= 0)
+  monit (>= 0)
+  system (>= 0)
+
